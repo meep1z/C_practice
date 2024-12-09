@@ -130,8 +130,36 @@ int main() // Точка входа в программу.
  
     // cout << "Расстояние между населенными пунктами: " << map_scale * distance_between_points << " км." << endl;
 
-    
 
+    srand(time(NULL));
+    // работа с рандомом и команда Sleep():
+    int value = rand();
+    cout << "\nРандомное число: " << value;
+    // rand() % (end - start + 1) + start; start = 16 end = 11:
+    int value1 = rand() % (16 - 11 + 1) + 11;
+    cout << "\nРандомное число в диапазоне 11-16: " << value1;
+
+    int mas[5]{};
+    for (int i = 0; i < 5; i++) {
+        mas[i] = rand() % (100 - 1 + 1) + 1;
+    }
+
+    cout << "\nВывод массива: ";
+    for (int i = 0; i < 5; i++) {
+        cout << mas[i] << " "; // вывод элемента массива
+    }
+
+    cout << "\nВывод массива в обратном порядке: ";
+    for (int i = 5 - 1; i >= 0; i--) {
+        cout << mas[i] << " ";
+    }
+
+    cout << "\nВывод чётных элементов массива: ";
+    for (int i = 0; i < 5; i++) {
+        if (mas[i] % 2 == 0) {
+            cout << mas[i] << " "; // вывод элемента массива
+        }
+    }
 
 
     Sleep(15000);
