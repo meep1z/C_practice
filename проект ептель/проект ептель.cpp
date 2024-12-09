@@ -131,35 +131,106 @@ int main() // Точка входа в программу.
     // cout << "Расстояние между населенными пунктами: " << map_scale * distance_between_points << " км." << endl;
 
 
-    srand(time(NULL));
-    // работа с рандомом и команда Sleep():
-    int value = rand();
-    cout << "\nРандомное число: " << value;
-    // rand() % (end - start + 1) + start; start = 16 end = 11:
-    int value1 = rand() % (16 - 11 + 1) + 11;
-    cout << "\nРандомное число в диапазоне 11-16: " << value1;
+    //srand(time(NULL));
+    //// работа с рандомом и команда Sleep():
+    //int value = rand();
+    //cout << "\nРандомное число: " << value;
+    //// rand() % (end - start + 1) + start; start = 16 end = 11:
+    //int value1 = rand() % (16 - 11 + 1) + 11;
+    //cout << "\nРандомное число в диапазоне 11-16: " << value1;
 
-    int mas[5]{};
-    for (int i = 0; i < 5; i++) {
-        mas[i] = rand() % (100 - 1 + 1) + 1;
+    //int mas[5]{};
+    //for (int i = 0; i < 5; i++) {
+    //    mas[i] = rand() % (100 - 1 + 1) + 1;
+    //}
+
+    //cout << "\nВывод массива: ";
+    //for (int i = 0; i < 5; i++) {
+    //    cout << mas[i] << " "; // вывод элемента массива
+    //}
+
+    //cout << "\nВывод массива в обратном порядке: ";
+    //for (int i = 5 - 1; i >= 0; i--) {
+    //    cout << mas[i] << " ";
+    //}
+
+    //cout << "\nВывод чётных элементов массива: ";
+    //for (int i = 0; i < 5; i++) {
+    //    if (mas[i] % 2 == 0) {
+    //        cout << mas[i] << " "; // вывод элемента массива
+    //    }
+    //}
+
+    //// Записать в ячейку массива своё значение:
+
+    //mas[0] = 100;
+    //cout << "\nВывод изменённой ячейки массива: " << mas[0];
+    
+
+    // задание 1:
+
+
+    int mas[6]{};
+
+    for (int i = 0; i < 6; i++) {
+        cout << "Введите прибыль за месяц: ";
+        cin >> mas[i];
     }
 
-    cout << "\nВывод массива: ";
-    for (int i = 0; i < 5; i++) {
-        cout << mas[i] << " "; // вывод элемента массива
-    }
+    int sum = mas[0] + mas[1] + mas[2] + mas[3] + mas[4] + mas[5];
 
-    cout << "\nВывод массива в обратном порядке: ";
-    for (int i = 5 - 1; i >= 0; i--) {
+    cout << "Общая прибыль: " << sum;
+
+
+    // задание 2:
+    
+
+    cout << "\n\nВывод массива в обратном порядке: ";
+    for (int i = 6 - 1; i >= 0; i--) {
         cout << mas[i] << " ";
+    } 
+
+
+    // задание 3:
+
+
+    int mas2[5]{};
+
+    for (int i = 0; i < 5; i++) {
+        cout << "\nВведите длину стороны: ";
+        cin >> mas[i];
     }
 
-    cout << "\nВывод чётных элементов массива: ";
-    for (int i = 0; i < 5; i++) {
-        if (mas[i] % 2 == 0) {
-            cout << mas[i] << " "; // вывод элемента массива
+    int perimeter = mas[0] + mas[1] + mas[2] + mas[3] + mas[4];
+
+    cout << "Периметр: " << perimeter;
+
+
+    // задание 4:
+
+
+    int mas3[11]{};
+    int min = mas3[0];
+    int max = mas3[0];
+
+    for (int i = 0; i < 11; i++) {
+        cout << "Введите прибыль за месяц: ";
+        cin >> mas3[i];
+    }
+    for (int i = 1; i < 11; i++) {
+        if (mas3[i] < min) {
+            min = mas3[i];
+        }
+        if (mas3[i] > max) {
+            max = mas3[i];
         }
     }
+
+    cout << "Минимальная прибыль: " << min << endl;
+    cout << "Максимальная прибыль: " << max << endl;
+    
+
+
 
 
     Sleep(15000);
