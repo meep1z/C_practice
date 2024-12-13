@@ -5,6 +5,7 @@ using namespace std; // Подключение пространства имён
 int main() // Точка входа в программу.
 {
     setlocale(LC_ALL, "rus"); // подключение кириллицы.
+    srand(time(NULL));
     // Объявление констант:
     // const int days_in_year = 366;
     // const int hours_in_day = 24;
@@ -167,71 +168,136 @@ int main() // Точка входа в программу.
     //cout << "\nВывод изменённой ячейки массива: " << mas[0];
     
 
+    //// задание 1:
+
+
+    //int mas[6]{};
+
+    //for (int i = 0; i < 6; i++) {
+    //    cout << "Введите прибыль за месяц: ";
+    //    cin >> mas[i];
+    //}
+
+    //int sum = mas[0] + mas[1] + mas[2] + mas[3] + mas[4] + mas[5];                            
+    //cout << "Общая прибыль: " << sum;
+
+
+    //// задание 2:
+    //
+
+    //cout << "\n\nВывод массива в обратном порядке: ";
+    //for (int i = 6 - 1; i >= 0; i--) {
+    //    cout << mas[i] << " ";
+    //} 
+
+
+    //// задание 3:
+    // 
+
+    //int mas2[5]{};
+
+    //for (int i = 0; i < 5; i++) {
+    //    cout << "\nВведите длину стороны: ";
+    //    cin >> mas[i];
+    //}
+
+    //int perimeter = mas[0] + mas[1] + mas[2] + mas[3] + mas[4];
+
+    //cout << "Периметр: " << perimeter;
+
+
+    //// задание 4:
+
+
+    //int mas3[11]{};
+    //int min = mas3[0];
+    //int max = mas3[0];
+
+    //for (int i = 0; i < 11; i++) {
+    //    cout << "Введите прибыль за месяц: ";
+    //    cin >> mas3[i];
+    //}
+    //for (int i = 1; i < 11; i++) {
+    //    if (mas3[i] < min) {
+    //        min = mas3[i];
+    //    }
+    //    if (mas3[i] > max) {
+    //        max = mas3[i];
+    //    }
+    //}
+
+    //cout << "Минимальная прибыль: " << min << endl;
+    //cout << "Максимальная прибыль: " << max << endl;
+
     // задание 1:
 
-
-    int mas[6]{};
-
-    for (int i = 0; i < 6; i++) {
-        cout << "Введите прибыль за месяц: ";
-        cin >> mas[i];
+    int osn_mas[10]{}; // основной массив
+    for (int i = 0; i < 10; i++) {
+        osn_mas[i] = rand() % (100 - 1 + 1) + 1; // цикл заполнения основного массива
     }
 
-    int sum = mas[0] + mas[1] + mas[2] + mas[3] + mas[4] + mas[5];
 
-    cout << "Общая прибыль: " << sum;
+    for (int i = 0; i < 10; i++) {
+        cout << osn_mas[i] << " "; // цикл вывода основного массива
+    }
+    cout << endl;
 
-
-    // задание 2:
-    
-
-    cout << "\n\nВывод массива в обратном порядке: ";
-    for (int i = 6 - 1; i >= 0; i--) {
-        cout << mas[i] << " ";
-    } 
-
-
-    // задание 3:
-
-
+    int mas1[5]{}; // обьявление двух массивов по 5 штук
     int mas2[5]{};
 
+    int i = 0;
+
+    for (;i < 5; i++) {
+        mas1[i] = osn_mas[i];
+    }
+
+    for (int j = 0; i < 10; i++) {
+        mas2[j] = osn_mas[i];
+        j++;
+    }
+
+    cout << endl;
     for (int i = 0; i < 5; i++) {
-        cout << "\nВведите длину стороны: ";
-        cin >> mas[i];
+        cout << mas1[i] << " ";
+    }
+    cout << endl;
+    cout << endl;
+    for (int i = 0; i < 5; i++) {
+        cout << mas2[i] << " ";
+    }
+    cout << endl;
+
+    // задание 2:
+
+    int mas11[10]{};
+    for (int i = 0; i < 10; i++) {
+        mas11[i] = rand() % (100 - 1 + 1) + 1;
     }
 
-    int perimeter = mas[0] + mas[1] + mas[2] + mas[3] + mas[4];
-
-    cout << "Периметр: " << perimeter;
-
-
-    // задание 4:
-
-
-    int mas3[11]{};
-    int min = mas3[0];
-    int max = mas3[0];
-
-    for (int i = 0; i < 11; i++) {
-        cout << "Введите прибыль за месяц: ";
-        cin >> mas3[i];
-    }
-    for (int i = 1; i < 11; i++) {
-        if (mas3[i] < min) {
-            min = mas3[i];
-        }
-        if (mas3[i] > max) {
-            max = mas3[i];
-        }
+    int mas22[10]{};
+    for (int i = 0; i < 10; i++) {
+        mas22[i] = rand() % (100 - 1 + 1) + 1;
     }
 
-    cout << "Минимальная прибыль: " << min << endl;
-    cout << "Максимальная прибыль: " << max << endl;
+
+    for (int i = 0; i < 10; i++) {
+        cout << osn_mas[i] << " ";
+    }
+
+    cout << endl;
+
+    int mas33[10]{};
+
+    for (int i = 0; i < 10; i++) {
+        mas33[i] = mas11[i] + mas22[i];
+    }
+
+    for (int i = 0; i < 10; i++) {
+        cout << mas33[i] << " ";
+    }
+
+
     
-
-
-
 
     Sleep(15000);
 }
